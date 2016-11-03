@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>获取当前位置</title>
+    <script type="text/javascript">
+
+
+        function vodPlay() {
+            uexTencentLVB.vodPlay( {
+                url: "http://2000.liveplay.myqcloud.com/live/2000_44c6e64e79af11e69776e435c87f075e.flv",
+                bgImage:"res://bg.png"
+            });
+        }
+        function livePlay() {
+            uexTencentLVB.livePlay( {
+                url: "http://2000.liveplay.myqcloud.com/live/2000_44c6e64e79af11e69776e435c87f075e.flv",
+                bgImage:"res://bg.png"
+            });
+        }
+        function publish() {
+            uexTencentLVB.publish( {
+                url: "rtmp://2000.livepush.myqcloud.com/live/2000_4eb4da7079af11e69776e435c87f075e?bizid=2000",
+                bgImage:"res://bg.png"
+            });
+        }
+
+    </script>
+</head>
+<body>
+<div class="conbor">
+    <div class="consj">
+        <input class="btn" type="button" value="vodPlay" onclick="vodPlay()"><br/>
+        <input class="btn" type="button" value="livePlay" onclick="livePlay()"><br/>
+        <input class="btn" type="button" value="publish" onclick="publish()"><br/>
+    </div>
+</div>
+</body>
+</html>

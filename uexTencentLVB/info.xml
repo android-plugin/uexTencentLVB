@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uexplugins>
+    <plugin uexName="uexTencentLVB" version="4.0.0" build="0">
+        <info>0:腾讯云直播插件</info>
+    </plugin>
+</uexplugins>
