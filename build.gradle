@@ -7,9 +7,14 @@ repositories {
 }
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
-    compile files('libs/android-support-v4.jar')
+    compile 'org.appcan:engine:+:systemRelease@aar'
 }
 
+repositories {
+    maven {
+        url 'https://raw.githubusercontent.com/android-plugin/mvn-repo/master/'
+    }
+}
 android {
 
     compileSdkVersion 21
