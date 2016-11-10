@@ -90,7 +90,7 @@ public class LivePlayerActivity extends RTMPBaseActivity implements ITXLivePlayL
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(EUExUtil.getResLayoutID("uplugin_uextencentlvb_activity_play"), null);
+        View view = inflater.inflate(EUExUtil.getResLayoutID("plugin_uextencentlvb_activity_play"), null);
         initView(view);
 
         if (mLivePlayer == null) {
