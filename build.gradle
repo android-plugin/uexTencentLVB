@@ -16,17 +16,15 @@ repositories {
     flatDir {
         dirs 'libs'
     }
+    maven {
+        url 'https://raw.githubusercontent.com/android-plugin/mvn-repo/master/'
+    }
 }
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
     compile 'org.appcan:engine:+:systemRelease@aar'
 }
 
-repositories {
-    maven {
-        url 'https://raw.githubusercontent.com/android-plugin/mvn-repo/master/'
-    }
-}
 android {
 
     compileSdkVersion 22
@@ -61,8 +59,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 14 //
-        applicationId 'org.zywx.wbpalmstar.widgetone.uexTabIndicatorView'
-        //multiDexEnabled true
+        applicationId 'org.zywx.wbpalmstar.widgetone.uexTencentLVB'
+        multiDexEnabled true
     }
 }
 
