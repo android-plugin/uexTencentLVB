@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
-    <plugin uexName="uexTencentLVB" version="4.0.2" build="2">
-        <info>2:去除多余图片</info>
+    <plugin uexName="uexTencentLVB" version="4.0.3" build="3">
+        <info>3:sdk升级，添加是否显示log功能按钮参数</info>
+        <build>2:去除多余图片</build>
         <build>1:添加录音权限</build>
         <build>0:腾讯云直播插件</build>
     </plugin>

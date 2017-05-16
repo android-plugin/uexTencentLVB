@@ -154,6 +154,10 @@ public class LivePlayerActivity extends RTMPBaseActivity implements ITXLivePlayL
                 }
             }
         });
+        boolean isShowLog = getArguments().getBoolean(EUExTencentLVB.BOOLEAN_IS_SHOW_LOG);
+        mBtnLog.setVisibility(isShowLog ? View.VISIBLE : View.GONE);
+        TextView btnLogDivider = (TextView) view.findViewById(EUExUtil.getResIdID("btnLogDivider"));
+        btnLogDivider.setVisibility(isShowLog ? View.VISIBLE : View.GONE);
 
         //横屏|竖屏
         mBtnRenderRotation = (Button) view.findViewById(EUExUtil.getResIdID("btnOrientation"));
@@ -445,7 +449,7 @@ public class LivePlayerActivity extends RTMPBaseActivity implements ITXLivePlayL
             return false;
         }
 
-        mLivePlayer.setLogLevel(TXLiveConstants.LOG_LEVEL_DEBUG);
+        //mLivePlayer.setLogLevel(TXLiveConstants.LOG_LEVEL_DEBUG);
         appendEventLog(0, "点击播放按钮！播放类型：" + mPlayType);
 
         startLoadingAnimation();

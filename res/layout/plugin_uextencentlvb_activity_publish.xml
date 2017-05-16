@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_weight="1"/>
         <Button
-            android:id="@+id/btnTouchFoucs"
+            android:id="@+id/btnTouchFocus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/plugin_uextencentlvb_automatic"/>
@@ -109,6 +109,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/plugin_uextencentlvb_log_show"/>
         <TextView
+            android:id="@+id/btnLogDivider"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="1"/>
@@ -126,6 +127,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/plugin_uextencentlvb_flash_on"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnPushOrientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plugin_uextencentlvb_landscape"/>
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -215,6 +225,33 @@
         android:visibility="gone"
         android:clickable="true"
         android:layout_gravity="bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="调整曝光"
+                android:textSize="16sp" />
+            <SeekBar
+                android:id="@+id/exposure_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="18dp"
+                android:maxHeight="4.0dip"
+                android:minHeight="4.0dip"
+                android:visibility="visible"
+                android:progressDrawable="@drawable/plugin_uextencentlvb_seekbar_progress_drawable"
+                android:thumb="@drawable/plugin_uextencentlvb_circle"
+                android:max="20"
+                android:progress="10"
+                android:indeterminate="false" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -239,7 +276,8 @@
                 android:visibility="visible"
                 android:progressDrawable="@drawable/plugin_uextencentlvb_seekbar_progress_drawable"
                 android:thumb="@drawable/plugin_uextencentlvb_circle"
-                android:max="9"
+                android:max="7"
+                android:progress="5"
                 android:indeterminate="false" />
         </LinearLayout>
 
@@ -267,8 +305,37 @@
                 android:progressDrawable="@drawable/plugin_uextencentlvb_seekbar_progress_drawable"
                 android:thumb="@drawable/plugin_uextencentlvb_circle"
                 android:max="9"
+                android:progress="3"
                 android:indeterminate="false" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="滤镜效果"
+                android:textSize="16sp" />
+
+            <org.zywx.wbpalmstar.plugin.tencentlvb.util.TXHorizontalPickerView
+                android:id="@+id/filterPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@android:id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center" />
+            </org.zywx.wbpalmstar.plugin.tencentlvb.util.TXHorizontalPickerView>
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

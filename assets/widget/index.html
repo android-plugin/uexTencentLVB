@@ -17,14 +17,17 @@
         }
         function livePlay() {
             uexTencentLVB.livePlay( {
-                url: "http://2000.liveplay.myqcloud.com/live/2000_44c6e64e79af11e69776e435c87f075e.flv",
+                url: "rtmp://live.hkstv.hk.lxdns.com/live/hks",
                 bgImage:"res://bg.png"
             });
         }
         function publish() {
             uexTencentLVB.publish( {
                 url: "rtmp://2000.livepush.myqcloud.com/live/2000_4eb4da7079af11e69776e435c87f075e?bizid=2000",
-                bgImage:"res://bg.png"
+                bgImage:"res://bg.png",
+                options:{
+                    isShowLog:false
+                }
             });
         }
 

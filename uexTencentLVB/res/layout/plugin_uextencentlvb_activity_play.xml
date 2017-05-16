@@ -94,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/plugin_uextencentlvb_log_show"/>
             <TextView
+                android:id="@+id/btnLogDivider"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"/>

@@ -53,12 +53,13 @@ public class MainActivity extends FragmentActivity {
         flRoot = (FrameLayout) findViewById(EUExUtil.getResIdID("root"));
         BitmapDrawable drawable = new BitmapDrawable(getLocalImage(imageUrl));
         flRoot.setBackground(drawable);
-        initFragment(action, url);
+        initFragment(action, url, intent.getBooleanExtra(EUExTencentLVB.BOOLEAN_IS_SHOW_LOG, true));
     }
-    private void initFragment(int action, String url) {
+    private void initFragment(int action, String url, boolean isShowLog) {
         Bundle bundle = new Bundle();
         bundle.putInt(EUExTencentLVB.TEXT_ACTION, action);
         bundle.putString(EUExTencentLVB.TEXT_URL, url);
+        bundle.putBoolean(EUExTencentLVB.BOOLEAN_IS_SHOW_LOG, isShowLog);
         switch (action) {
             case EUExTencentLVB.ACTION_PUBLISH:
                 if (mPublisherFragment == null) {
